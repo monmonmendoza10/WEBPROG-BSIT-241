@@ -1,114 +1,4 @@
-</* GENERAL STYLE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
-body {
-    color: white;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: black;
-}
- 
-h1 {
-    color: red;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
- 
-h2 {
-    color: red;
-    margin-bottom: 15px;
-}
- 
-/* PROFILE / IMAGE SECTION */
-.gallery {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 400px;
-}
- 
-.gallery img {
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid red;
-}
- 
-/* COMMON GRID BOX STYLE */
-.container {
-    display: grid;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 50px auto;
-}
- 
-.box {
-    background: #111;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
- 
-.box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
-}
- 
-.box p {
-    line-height: 1.6;
-    margin-top: 10px;
-}
- 
-ul {
-    line-height: 1.8;
-    margin-left: 20px;
-    margin-top: 10px;
-}
- 
-/* DIFFERENT GRID LAYOUTS */
-.grid-1 {
-    grid-template-columns: 2fr 1fr;
-}
- 
-.grid-2 {
-    grid-template-columns: 1fr 1fr;
-}
- 
-.grid-3 {
-    grid-template-columns: 1fr 2fr;
-}
- 
-/* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-    .grid-1,
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
- 
-    h1 {
-        font-size: 2rem;
-    }
- 
-    .gallery img {
-        max-width: 280px;
-        height: 280px;
-    }
-}
- 
-/* Force minimum width for grid items on desktop */
-@media (min-width: 901px) {
-    .container {
-        min-width: 800px;
-    }
-}
+
  
 <!DOCTYPE html>
 <html lang="en">
@@ -136,16 +26,16 @@ ul {
     <div class="box about-me">
         <h2>About Me</h2>
         <p>
-            I am someone who is deeply interested in technology, especially in how new innovations shape the future.
-            I enjoy understanding how things work and continuously learning new IT skills.
+            I am Vinz Szymone Roi V. Mendoza I like playing basketball and bonding with family and
+            friends.
         </p>
     </div>
  
     <div class="box education">
         <h2>Education / Achievements</h2>
         <ul>
-            <li>Graduated from National University MOA Campus (Senior High School), Pasay City</li>
-            <li>NU SHS Discount 2024 – 50% Tuition Scholarship</li>
+            <li>Graduated from Our Lady of The Holy Rosary (Senior High School), Tanza Cavite</li>
+            <li>VARSITY WITH A – 100% Tuition Scholarship</li>
         </ul>
     </div>
 </div>
@@ -160,9 +50,9 @@ ul {
     <div class="box it-experience">
         <h2>IT Experience</h2>
         <ul>
-            <li>Building and troubleshooting desktop computers</li>
+            <li>Creating DATABASE</li>
             <li>Basic front-end and back-end development</li>
-            <li>Esports gamer (Mobile and PC)</li>
+            <li>Creating lights using arduino</li>
         </ul>
     </div>
 </div>
@@ -172,10 +62,10 @@ ul {
     <div class="box hobbies">
         <h2>Hobbies & Interests</h2>
         <ul>
-            <li>Playing games</li>
-            <li>Walking</li>
+            <li>Playing Basketball</li>
+            <li>Jogging</li>
             <li>Studying how machine parts work</li>
-            <li>Chess and other strategy games</li>
+            <li>nature trips and sponty trips</li>
             <li>Listening to various genres of music</li>
         </ul>
     </div>
@@ -183,7 +73,7 @@ ul {
     <div class="box goals">
         <h2>Goals in Life / Dream</h2>
         <ul>
-            <li>Start an IT company specializing in cybersecurity</li>
+            <li>Start an IT company specializing in cloud computing</li>
             <li>Achieve a sustainable life where "money is just paper"</li>
             <li>Provide for the people I cherish</li>
             <li>Become a notable figure in the IT field</li>
