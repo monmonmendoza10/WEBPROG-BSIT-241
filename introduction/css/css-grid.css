@@ -14,7 +14,7 @@
 
 .container div {
 
-  background-color: #f1f1f1;
+  background-color: #020202;
 
   color: #000;
 
@@ -55,14 +55,14 @@ h2 {
 /* PROFILE / IMAGE SECTION */
 .gallery {
     text-align: center;
-    margin: 40px auto;
-    max-width: 400px;
+    margin: 10px auto;
+    max-width: 40px;
 }
  
 .gallery img {
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
+    width: 70%;
+    max-width: 35px;
+    height: 35px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid red;
@@ -71,9 +71,9 @@ h2 {
 /* COMMON GRID BOX STYLE */
 .container {
     display: grid;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 50px auto;
+    gap: 10px;
+    max-width: 120px;
+    margin: 25px auto;
 }
  
 .box {
