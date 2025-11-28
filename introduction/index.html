@@ -1,108 +1,197 @@
+</* GENERAL STYLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: black;
+}
+ 
+h1 {
+    color: red;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+ 
+h2 {
+    color: red;
+    margin-bottom: 15px;
+}
+ 
+/* PROFILE / IMAGE SECTION */
+.gallery {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 400px;
+}
+ 
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+ 
+/* COMMON GRID BOX STYLE */
+.container {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+ 
+.box {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+}
+ 
+.box p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+ 
+ul {
+    line-height: 1.8;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+ 
+/* DIFFERENT GRID LAYOUTS */
+.grid-1 {
+    grid-template-columns: 2fr 1fr;
+}
+ 
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+ 
+.grid-3 {
+    grid-template-columns: 1fr 2fr;
+}
+ 
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .grid-1,
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+ 
+    h1 {
+        font-size: 2rem;
+    }
+ 
+    .gallery img {
+        max-width: 280px;
+        height: 280px;
+    }
+}
+ 
+/* Force minimum width for grid items on desktop */
+@media (min-width: 901px) {
+    .container {
+        min-width: 800px;
+    }
+}
+ 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+ 
 <head>
-<link rel="stylesheet" href="css/css-grid.css">
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBPROG IT241</title>
+    <link rel="stylesheet" href="css/css-grid.css">
 </head>
+ 
 <body>
  
-<h1>My Webpage </h1>
-<p>
+<h1>Personal Profile Web Page</h1>
  
-About Me<br>
-Im Vinz Szymone ROi V. Mendoza / my age is 19 )<br>
-college - Asia pacific College <br>
-Course (BSIT) <br>
-Hobbies & Interests <br>
-My hobbies are playing basketball and bonding with family and friendas<br>
-Goals In Life-To be come a succesful / My Dream is to have many cars<br>
-Picture Gallery<br>
- <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Girl with a jacket" width="500" height="600">
-</p>
- 
-<<<<<<< HEAD
- <div class="container">
-    <div>l</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-   
-</div>
-
-
-<div class="header">
-  <h1>Responsive Image Gallery</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
-</div>
-
-<!-- Photo Grid -->
-<div class="container"> 
-  <div class="column">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/falls2.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-    <img src="/w3images/nature.jpg" style="width:100%">
-    <img src="/w3images/mist.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-  </div>
-  
-=======
- <div class="container">
-    <div>l</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
-</div>
-
-
-<div class="header">
-  <h1>Responsive Image Gallery</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
-</div>
-
-<!-- Photo Grid -->
-<div class="container"> 
-  <div class="column">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/falls2.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-    <img src="/w3images/nature.jpg" style="width:100%">
-    <img src="/w3images/mist.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-  </div>
-  
- 
-  
-  <div class="container">
-<div>1</div>
-<div>2</div>
-<div>3</div>  
-<div>4</div>
-<div>5</div>
-<div>6</div>  
-</div>
->>>>>>> c1ebe3dd083f83875c2c89f5e4e9dde53afe5dab
- 
-
-  
-  <div class="container">
-<div>1</div>
-<div>2</div>
-<div>3</div>  
-<div>4</div>
-<div>5</div>
-<div>6</div>  
+<!-- Profile / Image Section -->
+<div class="gallery">
+    <h2>Profile</h2>
+    <img src="https://i.pinimg.com/736x/6c/01/03/6c0103febca508ba539e5579617a7c8a.jpg"
+         alt="Mirror Pic">
 </div>
  
-  
+<!-- ABOUT ME & EDUCATION GRID -->
+<div class="grid-1 container">
+    <div class="box about-me">
+        <h2>About Me</h2>
+        <p>
+            I am someone who is deeply interested in technology, especially in how new innovations shape the future.
+            I enjoy understanding how things work and continuously learning new IT skills.
+        </p>
+    </div>
+ 
+    <div class="box education">
+        <h2>Education / Achievements</h2>
+        <ul>
+            <li>Graduated from National University MOA Campus (Senior High School), Pasay City</li>
+            <li>NU SHS Discount 2024 – 50% Tuition Scholarship</li>
+        </ul>
+    </div>
+</div>
+ 
+<!-- COURSE & IT EXPERIENCE GRID -->
+<div class="grid-2 container">
+    <div class="box course">
+        <h2>Course</h2>
+        <p>Bachelor of Science in Information Technology</p>
+    </div>
+ 
+    <div class="box it-experience">
+        <h2>IT Experience</h2>
+        <ul>
+            <li>Building and troubleshooting desktop computers</li>
+            <li>Basic front-end and back-end development</li>
+            <li>Esports gamer (Mobile and PC)</li>
+        </ul>
+    </div>
+</div>
+ 
+<!-- HOBBIES & GOALS GRID -->
+<div class="grid-3 container">
+    <div class="box hobbies">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Playing games</li>
+            <li>Walking</li>
+            <li>Studying how machine parts work</li>
+            <li>Chess and other strategy games</li>
+            <li>Listening to various genres of music</li>
+        </ul>
+    </div>
+ 
+    <div class="box goals">
+        <h2>Goals in Life / Dream</h2>
+        <ul>
+            <li>Start an IT company specializing in cybersecurity</li>
+            <li>Achieve a sustainable life where "money is just paper"</li>
+            <li>Provide for the people I cherish</li>
+            <li>Become a notable figure in the IT field</li>
+            <li>Build my own company and increase my net worth</li>
+        </ul>
+    </div>
+</div>
+ 
 </body>
 </html>
+ 
