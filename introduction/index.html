@@ -41,6 +41,34 @@
             padding: 10px 0;
             margin-top: 40px;
         }
+
+        /* Grid Layout Styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .grid-container div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin: 10px 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Stack columns on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,7 +84,7 @@
 
     <h2>Contact Information</h2>
     <div class="content">
-        <p>Email: <a href="mailto:your.mendozaszymone10@gmail.com">your.email@example.com</a></p>
+        <p>Email: <a href="mailto:your.mendozaszymone10@gmail.com">your.mendozaszymone10@gmail.com</a></p>
     </div>
 
     <h2>Goals</h2>
@@ -73,37 +101,38 @@
         <p>&copy; 2025 Vinz Szymone ROi V. MEndoza</p>
     </footer>
 
-<div class="grid-container">
- 
-<div class="header"><h1>Chania</h1></div>
- 
-<div class="menu">
-<ul>
-<li>The Flight</li>
-<li>The City</li>
-<li>The Island</li>
-<li>The Food</li>
-</ul>
-</div>
- 
-<div class="content">
-<h1>The City</h1>
-<p>Chania is the capital of the Chania region on the island of Crete.</p>
-<p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed.</p>
-<p>Chania lies along the north west coast of the island Crete.</p>
-</div>  
- 
-<div class="facts">
-<h2>Facts:</h2>
-<ul>
-<li>Chania is a city on the island of Crete</li>
-<li>Crete is a Greek island in the Mediterranean Sea</li>
-</ul>
-</div>
- 
-<div class="footer"><p>Resize the browser window to see the responsive effect.</p></div>
-</div>
+    <!-- Grid Layout Section (City Information) -->
+    <div class="grid-container">
 
+        <div class="header">
+            <h1>Chania</h1>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete.</p>
+            <p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed.</p>
+            <p>Chania lies along the north-west coast of the island of Crete.</p>
+        </div>
+
+        <div class="facts">
+            <h2>Facts:</h2>
+            <ul>
+                <li>Chania is a city on the island of Crete</li>
+                <li>Crete is a Greek island in the Mediterranean Sea</li>
+            </ul>
+        </div>
+
+    </div> <!-- End of Grid Container -->
 
 </body>
 </html>
