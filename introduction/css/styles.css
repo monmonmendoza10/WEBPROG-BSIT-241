@@ -1,3 +1,4 @@
+/* General Section Title */
 .section-title {
   text-align: center;
   color: #e50914;
@@ -5,6 +6,7 @@
   margin-bottom: 40px;
 }
 
+/* Card styling */
 .card {
   background-color: #111;
   color: #ffffff;
@@ -35,10 +37,25 @@
   box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
 }
 
-.profile-img {
-  width: 150px;
-  height: 150px;
+/* Profile Picture Wrapper */
+.profile-pic-wrapper {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #e50914;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Image inside wrapper */
+.profile-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid #e50914;
 }
