@@ -1,51 +1,45 @@
 /*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
+* Start Bootstrap - Freelancer v7.0.7
+* https://startbootstrap.com/theme/freelancer
+* Licensed under MIT
 */
-//
-// Scripts
-// 
 
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', () => {
 
     // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+    const navbarShrink = () => {
+        const navbar = document.querySelector('#mainNav');
+        if (!navbar) return;
 
+        if (window.scrollY === 0) {
+            navbar.classList.remove('navbar-shrink');
+        } else {
+            navbar.classList.add('navbar-shrink');
+        }
     };
 
-    // Shrink the navbar 
+    // Run on page load
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
+    // Run when scrolling
     document.addEventListener('scroll', navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
+    // Activate Bootstrap ScrollSpy
+    const mainNav = document.querySelector('#mainNav');
+    if (mainNav && typeof bootstrap !== 'undefined') {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
             rootMargin: '0px 0px -40%',
         });
-    };
+    }
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+    // Collapse responsive navbar on item click
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelectorAll('#navbarResponsive .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
         });
