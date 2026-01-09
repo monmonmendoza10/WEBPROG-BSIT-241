@@ -1,48 +1,33 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.7
-* https://startbootstrap.com/theme/freelancer
-* Licensed under MIT
-*/
+// Show greeting message
+function showMessage() {
+  alert("Hi! Thanks for visiting my profile website 👋");
+}
 
-window.addEventListener('DOMContentLoaded', () => {
+// Navbar background change on scroll
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
 
-    // Navbar shrink function
-    const navbarShrink = () => {
-        const navbar = document.querySelector('#mainNav');
-        if (!navbar) return;
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 
-        if (window.scrollY === 0) {
-            navbar.classList.remove('navbar-shrink');
-        } else {
-            navbar.classList.add('navbar-shrink');
-        }
-    };
+// Simple fade-in animation on scroll
+const sections = document.querySelectorAll(".section");
 
-    // Run on page load
-    navbarShrink();
-
-    // Run when scrolling
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap ScrollSpy
-    const mainNav = document.querySelector('#mainNav');
-    if (mainNav && typeof bootstrap !== 'undefined') {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    }
-
-    // Collapse responsive navbar on item click
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navLinks = document.querySelectorAll('#navbarResponsive .nav-link');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
     });
+  },
+  { threshold: 0.2 }
+);
 
+sections.forEach((section) => {
+  observer.observe(section);
 });
